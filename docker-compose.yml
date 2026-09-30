@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  avyan-prakriti:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: avyan-prakriti-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_GEMINI_API_KEY=${NEXT_PUBLIC_GEMINI_API_KEY:-}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    networks:
+      - eco-network
+
+networks:
+  eco-network:
+    driver: bridge
