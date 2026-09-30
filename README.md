@@ -88,7 +88,7 @@ NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
 ```bash
 npm run dev
 ```
-Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+Open **https://avyan-prakriti.web.app/** or **https://avyan-prakriti.vercel.app/** in your browser.
 
 ---
 
